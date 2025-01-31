@@ -1,6 +1,6 @@
 # **NewAge Nations DAO: Solana AI Trading Agent**
 
-**NewAge Nations DAO** is a cutting-edge, **Multi-AI-Agent powered investment DAO** designed to revolutionize crypto investing. Each specialized AI agent operates autonomously, managing funds for various investment sub-DAOs. By leveraging collective intelligence and advanced AI-driven strategies, NewAge Nations aims to democratize access to sophisticated crypto investment tools, enabling users to outperform traditional methods and achieve superior returns. Join us in shaping the future of decentralized, AI-powered finance.
+**NewAge Nations DAO** is a cutting-edge, **Multi-AI-Agent powered Subscription-Staking DAO** designed to revolutionize crypto investing. Each specialized AI agent operates autonomously, managing funds for various sub-DAOs. By leveraging collective intelligence and advanced AI-driven strategies, NewAge Nations aims to democratize access to sophisticated crypto investment tools, enabling users to outperform traditional methods and achieve superior returns. Join us in shaping the future of decentralized, AI-powered finance.
 
 ---
 
