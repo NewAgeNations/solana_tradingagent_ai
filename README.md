@@ -223,6 +223,6 @@ We welcome contributions! Follow these steps:
 ## **Links and Resources**
 
 - **Website**: [www.newagenations.org](http://www.newagenations.org)
-- **Twitter**: [@liquidstakedwo](https://twitter.com/liquidstakedwo)
+- **Twitter**: [@liquidstakedao](https://twitter.com/liquidstakedao)
 - **Telegram**: [@nnewagenationsai](https://t.me/newagenationsai)
 - **Discord**: [https://discord.com/invite/ybSYGvmKT5](https://discord.com/invite/ybSYGvmKT5)
