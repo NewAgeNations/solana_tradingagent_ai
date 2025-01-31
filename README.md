@@ -188,14 +188,14 @@ Update the `config.json` file with your API keys and credentials:
 
 ## **Roadmap**
 
-### **2023-2025**
+### **2025**
 
 1. **Design of AI Trading Strategies**: Develop and test AI-driven trading algorithms.
 2. **Launch of NAC and NACH Tokens**: Enable community governance and council membership.
-3. **Deployment of AI Agents**: Launch AI Agents to manage the DAO's treasury.
+3. **Setuo the Main DAO**: Launch NewAge Nations DAO on [https](https://www.realms.today/) using NAC and NACH.
 4. **Dual-Staking Mechanism**: Implement dual-staking for NACH rewards.
-5. **ElizaOS Deployment**: Automate DAO operations using the ElizaOS framework.
-6. **NewAge Nations DAO Fund**: Launch a 1-Year DAO Fund to attract investors.
+5. **Solana AI Deployment**: Automate sub-DAOs investments using AI Agents .
+6. **NewAge Nations DAO Fund**: Launch a 1-Year DAO Fund  on [https](https://www.daos.fun/)  .
 
 ---
 
