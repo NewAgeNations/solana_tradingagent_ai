@@ -156,7 +156,7 @@ Update the `config.json` file with your API keys and credentials:
 
 ### **Smart Contracts**
 
-- Automate processes like token distribution and profit-sharing.
+- Automate processes like token distribution and incentives.
 
 ---
 
