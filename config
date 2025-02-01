@@ -1,0 +1,24 @@
+{
+  "deepseek_api_url": "https://api.deepseek.ai",  
+  "deepseek_api_key": "your_deepseek_api_key",  
+  "apify_api_token": "apify_api_vZUQ92ut3AcpMQheMPytOKwadhMFOX3zKeHC",
+  "rugcheck_api_url": "https://api.rugcheck.xyz/v1/token",
+  "telegram_bot_token": "7913028295:AAG7gYduBopwUcaL7C-iG2cyEXz2YmQrX2c",
+  "telegram_chat_id": "-1002415685120",
+  "database_config": {
+    "dbname": "newagenations",
+    "user": "postgres",
+    "password": "Joseph123@",
+    "host": "localhost"
+  },
+  "filters": {
+    "min_liquidity_usd": 10000,
+    "min_volume_usd": 5000,
+    "min_market_cap_usd": 100000
+  },
+  "blacklist": {
+    "tokens": ["0xRugToken1", "0xRugToken2"],
+    "developers": ["0xRugDev1", "0xRugDev2"]
+  }
+
+}
