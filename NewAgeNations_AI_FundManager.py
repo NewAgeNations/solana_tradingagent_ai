@@ -434,11 +434,17 @@ def main():
         # Wait for 5 minutes before the next iteration
         time.sleep(300)
 
+# Helper function to check if running with Streamlit
+def is_running_with_streamlit():
+    try:
+        return st.runtime.exists()
+    except AttributeError:
+        return False
+
 # Run the Streamlit dashboard only when using `streamlit run`
 if __name__ == "__main__":
     try:
-        # Check if Streamlit is running
-        if st._is_running_with_streamlit:
+        if is_running_with_streamlit():
             display_dashboard()
         else:
             main()
