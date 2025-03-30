@@ -1,0 +1,226 @@
+import time
+import json
+from datetime import datetime
+from solana.rpc.api import Client
+from solana.rpc.types import TokenAccountOpts
+from solana.transaction import Transaction
+from solana.publickey import PublicKey
+from solana.keypair import Keypair
+from spl.token.client import Token
+from spl.token.instructions import transfer, TransferParams
+import os
+from concurrent.futures import ThreadPoolExecutor
+import base64
+
+
+# Configuration for NACH and NAC
+CONFIG = {
+    "rpc_url": "https://api.mainnet-beta.solana.com",
+    "token_mint": "oJHmxmEU9A1h7SLNz74XiApuwhqCWghEnGhRTBZX7H6",  # NACH token mint
+    "reward_token_mint": "DkXiy8Pp1zLkVVVSGAVR7mpCDnW7pxT7F2ZFLdn1pump",  # NAC token mint
+    "token_name": "NewAgeCash",
+    "token_symbol": "NACH",
+    "reward_token_name": "NewAgeCoin",
+    "reward_token_symbol": "NAC",
+    "check_interval": 86400,  # 24 hours for daily rewards
+    "reward_per_interval": 1000.0,  # Total NAC to distribute daily
+    "state_file": "nach_reward_state.json",
+    "min_reward": 1,  # Minimum NAC reward per holder
+    "min_token": 10_000,  # Minimum NACH holding: 10k
+    "max_token": 100_000_000,  # Maximum NACH holding: 100M
+    "max_total_supply": 1_000_000_000  # NACH total supply: 1B
+}
+
+# Initialize Solana client
+connection = Client(CONFIG["rpc_url"])
+try:
+    # Load private key from environment variable
+    secret_key_base64 = os.environ["DISTRIBUTOR_PRIVATE_KEY"]
+    secret_key_bytes = base64.b64decode(secret_key_base64)  # Decode Base64
+    distributor_wallet = Keypair.from_secret_key(secret_key_bytes)
+    print(f"Distributor wallet loaded successfully: {distributor_wallet.public_key}")
+except Exception as e:
+    print(f"Error loading distributor wallet: {str(e)}")
+    exit(1)
+
+
+    
+
+# Initialize NAC token client
+nac_token = Token(
+    connection,
+    PublicKey(CONFIG["reward_token_mint"]),
+    PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"),  # SPL Token Program
+    distributor_wallet
+)
+
+# Get distributor's NAC token account
+try:
+    distributor_accounts = nac_token.get_accounts(distributor_wallet.public_key)
+    if "result" in distributor_accounts and "value" in distributor_accounts["result"]:
+        distributor_token_account = distributor_accounts["result"]["value"][0]["pubkey"]
+        print(f"Distributor NAC token account: {distributor_token_account}")
+    else:
+        raise Exception("No NAC token account found for the distributor wallet.")
+except Exception as e:
+    print(f"Error fetching distributor token account: {str(e)}")
+    exit(1)
+
+
+
+# Load and save state
+def load_state():
+    try:
+        with open(CONFIG["state_file"], "r") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {"processed_holders": {}, "last_run": None}
+
+def save_state(state):
+    with open(CONFIG["state_file"], "w") as f:
+        json.dump(state, f, indent=2)
+
+# Fetch current NACH holders
+def fetch_current_holders():
+    print(f"{datetime.now().isoformat()} - Fetching NACH holders...")
+    try:
+        resp = connection.get_program_accounts(
+            PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"),
+            encoding="jsonParsed",
+            filters=[
+                {"dataSize": 165},  # Token account size
+                {"memcmp": {"offset": 0, "bytes": CONFIG["token_mint"]}}
+            ]
+        )
+        return resp.value
+    except Exception as e:
+        print(f"Error fetching holders: {str(e)}")
+        return []
+
+# Calculate NAC rewards for NACH holders
+def calculate_rewards(holders, state):
+    try:
+        # Get decimals for NACH and NAC
+        nach_mint_info = connection.get_account_info(PublicKey(CONFIG["token_mint"])).value
+        nach_decimals = int.from_bytes(nach_mint_info.data[44:48], "le")
+        
+        nac_mint_info = connection.get_account_info(PublicKey(CONFIG["reward_token_mint"])).value
+        nac_decimals = int.from_bytes(nac_mint_info.data[44:48], "le")
+        
+        # Convert amounts based on decimals
+        min_base = CONFIG["min_token"] * (10 ** nach_decimals)
+        max_base = CONFIG["max_token"] * (10 ** nach_decimals)
+        total_supply = CONFIG["max_total_supply"] * (10 ** nach_decimals)
+        reward_amount = int(CONFIG["reward_per_interval"] * (10 ** nac_decimals))
+        min_reward_amount = int(CONFIG["min_reward"] * (10 ** nac_decimals))
+
+        rewards = []
+        for holder in holders:
+            holder_pubkey = str(holder.pubkey)
+            balance = int.from_bytes(holder.account.data[64:72], "le")
+
+            # Skip if already processed
+            if holder_pubkey in state["processed_holders"]:
+                continue
+
+            # Check eligibility based on NACH balance
+            if min_base <= balance <= max_base:
+                reward_tokens = int((balance / total_supply) * reward_amount)
+                if reward_tokens >= min_reward_amount:
+                    # Get recipient's NAC token account
+                    recipient_token_accounts = connection.get_token_accounts_by_owner(
+                        PublicKey(holder_pubkey),
+                        TokenAccountOpts(mint=PublicKey(CONFIG["reward_token_mint"]))
+                    ).value
+                    if recipient_token_accounts:
+                        recipient_token_account = recipient_token_accounts[0].pubkey
+                        rewards.append({
+                            "pubkey": holder_pubkey,
+                            "token_account": str(recipient_token_account),
+                            "amount": reward_tokens
+                        })
+                        state["processed_holders"][holder_pubkey] = {
+                            "sent": datetime.now().isoformat(),
+                            "amount": reward_tokens
+                        }
+                    else:
+                        print(f"No NAC token account for {holder_pubkey}")
+        return rewards, state
+    except Exception as e:
+        print(f"Error calculating rewards: {str(e)}")
+        return [], state
+
+# Send NAC reward to a single holder
+def send_single_reward(reward):
+    try:
+        txn = Transaction().add(
+            transfer(
+                TransferParams(
+                    program_id=PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"),
+                    source=distributor_token_account,
+                    dest=PublicKey(reward["token_account"]),
+                    owner=distributor_wallet.public_key,
+                    amount=reward["amount"]
+                )
+            )
+        )
+        signature = connection.send_transaction(txn, distributor_wallet).value
+        print(f"Sent {reward['amount'] / (10 ** nac_token.decimals)} NAC to {reward['pubkey']}: {signature}")
+        return True, reward["pubkey"], signature
+    except Exception as e:
+        return False, reward["pubkey"], str(e)
+
+# Run distribution cycle
+def distribution_cycle(state):
+    print(f"\n=== Starting distribution cycle at {datetime.now().isoformat()} ===")
+    
+    # Check distributor's NAC balance
+    balance = nac_token.get_balance(distributor_token_account).value
+    if balance < int(CONFIG["reward_per_interval"] * (10 ** nac_token.decimals)):
+        print("Error: Insufficient NAC balance in distributor wallet!")
+        return state
+
+    holders = fetch_current_holders()
+    if not holders:
+        print("No NACH holders found.")
+        return state
+
+    rewards, new_state = calculate_rewards(holders, state)
+    if not rewards:
+        print("No eligible holders for NAC rewards.")
+        return new_state
+
+    total_nac = sum(r["amount"] for r in rewards) / (10 ** nac_token.decimals)
+    print(f"Distributing {len(rewards)} rewards totaling {total_nac} NAC")
+
+    # Send rewards in parallel
+    success_count = 0
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        futures = [executor.submit(send_single_reward, reward) for reward in rewards]
+        for future in futures:
+            success, pubkey, msg = future.result()
+            if success:
+                success_count += 1
+            else:
+                print(f"Failed to send to {pubkey}: {msg}")
+                if pubkey in new_state["processed_holders"]:
+                    del new_state["processed_holders"][pubkey]
+
+    print(f"Successfully sent {success_count}/{len(rewards)} NAC rewards")
+    new_state["last_run"] = datetime.now().isoformat()
+    return new_state
+
+# Main loop
+def main():
+    state = load_state()
+    print("Starting NACH Reward Distributor (Paying in NAC)")
+    print(f"Config: {json.dumps(CONFIG, indent=2)}")
+    
+    while True:
+        state = distribution_cycle(state)
+        save_state(state)
+        print(f"\nNext distribution in {CONFIG['check_interval']} seconds...")
+        time.sleep(CONFIG["check_interval"])
+
+if __name__ == "__main__":
+    main()
