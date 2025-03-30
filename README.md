@@ -1,49 +1,83 @@
-# AI Trading Agent
+# NewAgeNations for DAOs
 
-**NewAge Nations DAO** is a cutting-edge, **Multi-AI-Agent powered investment DAO** designed to revolutionize crypto investing. Each specialized AI agent operates autonomously, managing funds for various investment sub-DAOs. By leveraging collective intelligence and advanced AI-driven strategies, NewAge Nations aims to democratize access to sophisticated crypto investment tools, enabling users to outperform traditional methods and achieve superior returns. Join us in shaping the future of decentralized, AI-powered finance.
+Welcome to **NewAgeNations for DAOs** – a hub for multiple DAOs offering a launchpad to projects listed on [daos.fun](https://www.daos.fun). Our ecosystem incentivizes participation through dual-token subscription staking, airdrop distributions to NAC holders, and bonus online shopping via NACH payment-vesting.
 
----
+Our platform consists of three core tokens:
+- **NewAgeCoin (NAC):** The voting power token.
+- **NewAgeCash (NACH):** The utility-payment token.
+- **NewAge Nations DAO (NAN):** The governance token for our community-owned model.
 
-## Features
-
-- **Token Analysis**:
-  - Fetches token data from DexScreener.
-  - Analyzes tokens using Pocket Universe for fake volume detection.
-  - Checks tokens on RugCheck for legitimacy.
-  - Uses DeepSeek AI for predictive analytics and sentiment analysis.
-
-- **Trading Execution**:
-  - Executes buy/sell orders via BonkBot API.
-  - Supports dynamic trading strategies based on AI insights.
-
-- **Database Storage**:
-  - Saves token data and analysis results to a PostgreSQL database.
-
-- **Telegram Alerts**:
-  - Sends real-time alerts for anomalies and trade executions.
-
-- **Web UI**:
-  - Built with Streamlit for monitoring and control.
+Our AI-powered Dapp and High Volume Trading System (HVTS) generate daily revenues, facilitating NACH buy-backs and enabling daily rewards for NAC holders.
 
 ---
 
-## Prerequisites
+## Useful Links
 
-- Python 3.9 or higher
-- PostgreSQL (for database storage)
-- API keys for:
-  - DexScreener
-  - Pocket Universe
-  - RugCheck
-  - DeepSeek AI
-  - BonkBot
-  - Telegram Bot
+- **DAPP:** [https://dev.fun/p/32c0eaa681a18e779615](https://dev.fun/p/32c0eaa681a18e779615)
+- **HVTS:** [https://www.myfxbook.com/portfolio/newage-nations-dao/11392148](https://www.myfxbook.com/portfolio/newage-nations-dao/11392148)
+- **DAO:** [https://www.daos.fun/dao/3p4JfoDZPi88y7dgkrtYWzAL9H15eKivSpA1HHFKzft3](https://www.daos.fun/dao/3p4JfoDZPi88y7dgkrtYWzAL9H15eKivSpA1HHFKzft3)
+- **NACH:** [https://raydium.io/swap/?inputMint=sol&outputMint=oJHmxmEU9A1h7SLNz74XiApuwhqCWghEnGhRTBZX7H6](https://raydium.io/swap/?inputMint=sol&outputMint=oJHmxmEU9A1h7SLNz74XiApuwhqCWghEnGhRTBZX7H6)
+- **NAC:** [https://pump.fun/coin/DkXiy8Pp1zLkVVVSGAVR7mpCDnW7pxT7F2ZFLdn1pump](https://pump.fun/coin/DkXiy8Pp1zLkVVVSGAVR7mpCDnW7pxT7F2ZFLdn1pump)
+- **Discord:** [https://discord.com/invite/ybSYGvmKT5](https://discord.com/invite/ybSYGvmKT5)
+- **Website:** [http://www.newagenations.exchange/](http://www.newagenations.exchange/)
 
 ---
 
-## Installation
+## NACH Airdrops to NAC Holders
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/crypto-trading-bot.git
-   cd crypto-trading-bot
+At the heart of our rewards engine is a system built on the **Solana blockchain**. Key features include:
+
+- **Seamless Integration:**  
+  Direct connection to Solana’s mainnet via the latest Solana library ensures rapid and reliable data exchange.
+
+- **Daily Rewards:**  
+  Every day, our engine scans for eligible NAC holders, calculates their proportional rewards, and automatically distributes NACH to their wallets.
+
+---
+
+## Tokenomics
+
+### (a) NewAgeCoin (NAC)
+- **Total Supply:** 1 Billion NAC  
+- **Platform:** Pump.Fun  
+- **Tax:** 0%  
+- **Contract Address:**  
+  `DkXiy8Pp1zLkVVVSGAVR7mpCDnW7pxT7F2ZFLdn1pump`
+
+### (b) NewAgeCash (NACH)
+- **Total Supply:** 1 Billion NACH  
+- **Platform:** Raydium.io  
+- **Tax:** 10% Transaction Fees  
+- **Contract Address:**  
+  `oJHmxmEU9A1h7SLNz74XiApuwhqCWghEnGhRTBZX7H6`
+
+### (c) NewAge Nations DAO (NAN)
+- **Total Supply:** 1 Billion NAN  
+- **Platform:** Daos.Fun  
+- **Tax:** 0%  
+- **Contract Address:**  
+  `3p4JfoDZPi88y7dgkrtYWzAL9H15eKivSpA1HHFKzft3`
+
+---
+
+## Buy Now
+
+Purchase your tokens from the links below:
+- **NewAgeCoin:** [Buy on Pump.Fun](https://pump.fun/coin/DkXiy8Pp1zLkVVVSGAVR7mpCDnW7pxT7F2ZFLdn1pump)
+- **NewAgeCash:** [Buy on Raydium.io](https://raydium.io/swap/?inputMint=sol&outputMint=oJHmxmEU9A1h7SLNz74XiApuwhqCWghEnGhRTBZX7H6)
+- **NewAge Nations DAO:** [Buy on Daos.Fun](https://www.daos.fun/dao/3p4JfoDZPi88y7dgkrtYWzAL9H15eKivSpA1HHFKzft3)
+
+---
+
+## Join the Community
+
+Stay connected and join our growing community:
+- **Telegram:** [@newagenationsexchange](https://t.me/newagenationsexchange)
+- **Instagram:** [newagenations](https://www.instagram.com/newagenations)
+- **Twitter (X):** [@liquidstakedao](https://twitter.com/liquidstakedao)
+- **Discord:** [Join here](https://discord.com/invite/ybSYGvmKT5)
+- **Website:** [newagenations.exchange](https://www.newagenations.exchange)
+
+---
+
+&copy; {2025} **NewAgeNations DAO.** All rights reserved.
