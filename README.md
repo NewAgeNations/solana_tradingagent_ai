@@ -31,10 +31,10 @@ At the heart of our rewards engine is a system built on the **Solana blockchain*
   Direct connection to Solana’s mainnet via the latest Solana library ensures rapid and reliable data exchange.
 
 - **SOL Rewards:**  
-  Every 10 minutes, our engine scans for eligible NACH holders, calculates their proportional rewards, and automatically distributes NACH to their wallets.
+  Every 10 minutes, our engine scans for eligible NACH holders, calculates their proportional rewards, and automatically distributes SOL to their wallets.
 
 - **100% APR in 90 Days**  
-  Every 90 Days, holders of NAC, you stake NACH(USD) earn 100% APR. After 10 months, you get your initial NACH(USD) Subscription back. 
+  Every 90 Days, holders of NAC who stake their NACH(USD) earn 100% APR. After 10 months, you get your initial NACH(USD) Subscription back. 
 
 ---
 
