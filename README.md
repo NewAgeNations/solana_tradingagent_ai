@@ -7,7 +7,7 @@ Our platform consists of three core tokens:
 - **NewAgeCash (NACH):** The utility-payment token for Subscription-Staking, and  incemtives.
 - **NewAge Nations DAO (NAN):** Our community-driven model for funding the NewAge Nations DAO.
 
-Our AI-powered Dapp and High Volume Trading System (HVTS) generate daily revenues, facilitating NACH buy-backs and enabling daily rewards for NAC holders.
+Our AI-powered Dapp and High Volume Trading System (HVTS) generate daily revenues, facilitating NACH buy-backs and enabling daily liquidity for NAC.
 
 ---
 
@@ -19,7 +19,7 @@ Our AI-powered Dapp and High Volume Trading System (HVTS) generate daily revenue
 - **NACH:** [https://raydium.io/swap/?inputMint=sol&outputMint=oJHmxmEU9A1h7SLNz74XiApuwhqCWghEnGhRTBZX7H6](https://raydium.io/swap/?inputMint=sol&outputMint=oJHmxmEU9A1h7SLNz74XiApuwhqCWghEnGhRTBZX7H6)
 - **NAC:** [https://pump.fun/coin/DkXiy8Pp1zLkVVVSGAVR7mpCDnW7pxT7F2ZFLdn1pump](https://pump.fun/coin/DkXiy8Pp1zLkVVVSGAVR7mpCDnW7pxT7F2ZFLdn1pump)
 - **Discord:** [https://discord.com/invite/ybSYGvmKT5](https://discord.com/invite/ybSYGvmKT5)
-- **Website:** [http://www.newagenations.exchange/](http://www.newagenations.exchange/)
+- **Website:** [http://www.liquidstake.finance/](http://www.;iquidstake.finance/)
 
 ---
 
