@@ -14,7 +14,7 @@ Our AI-powered Dapp and High Volume Trading System (HVTS) generate daily revenue
 ## Useful Links
 
 - **DAPP:** [https://dev.fun/p/32c0eaa681a18e779615](https://dev.fun/p/32c0eaa681a18e779615)
-- **HVTS:** [https://www.myfxbook.com/portfolio/newage-nations-dao/11392148](https://www.myfxbook.com/portfolio/newage-nations-dao/11392148)
+- **HVTS:** [https://www.myfxbook.com/portfolio/newagenations-ai/11442149](https://www.myfxbook.com/portfolio/newagenations-ai/11442149)
 - **DAO:** [https://www.daos.fun/dao/3p4JfoDZPi88y7dgkrtYWzAL9H15eKivSpA1HHFKzft3](https://www.daos.fun/dao/3p4JfoDZPi88y7dgkrtYWzAL9H15eKivSpA1HHFKzft3)
 - **NACH:** [https://raydium.io/swap/?inputMint=sol&outputMint=oJHmxmEU9A1h7SLNz74XiApuwhqCWghEnGhRTBZX7H6](https://raydium.io/swap/?inputMint=sol&outputMint=oJHmxmEU9A1h7SLNz74XiApuwhqCWghEnGhRTBZX7H6)
 - **NAC:** [https://pump.fun/coin/DkXiy8Pp1zLkVVVSGAVR7mpCDnW7pxT7F2ZFLdn1pump](https://pump.fun/coin/DkXiy8Pp1zLkVVVSGAVR7mpCDnW7pxT7F2ZFLdn1pump)
