@@ -75,11 +75,11 @@ Purchase your tokens from the links below:
 ## Join the Community
 
 Stay connected and join our growing community:
-- **Telegram:** [@newagenationsexchange](https://t.me/newagenationsexchange)
+- **Telegram:** [@newagenationsai](https://t.me/newagenationsai)
 - **Instagram:** [newagenations](https://www.instagram.com/newagenations)
 - **Twitter (X):** [@liquidstakedao](https://twitter.com/liquidstakedao)
 - **Discord:** [Join here](https://discord.com/invite/ybSYGvmKT5)
-- **Website:** [newagenations.exchange](https://www.newagenations.exchange)
+- **Website:** [http://www.liquidstake.finance/](http://www.;iquidstake.finance/)
 
 ---
 
