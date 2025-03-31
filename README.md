@@ -3,9 +3,9 @@
 Welcome to **NewAgeNations DAO** – a Dev Hub for AI Tokenisation & API Automations for The NewAge Nations. Our ecosystem incentivizes participation through dual-token subscription staking; rewwarding holders of NACH with SOL every 10 minutes, and upto 100% APR incentives every 90 days. Holding upto 100,000 NAC, you are eligible to participate in the NACH 100% APR Subscription-Staking and also participate in NewAge Nations commmunity voting.
 
 Our platform consists of three core tokens:
-- **NewAgeCoin (NAC):** The voting power token.
-- **NewAgeCash (NACH):** The utility-payment token.
-- **NewAge Nations DAO (NAN):** The governance token for our community-owned model.
+- **NewAgeCoin (NAC):** Our DApp's native token for voting & commmunity participation.
+- **NewAgeCash (NACH):** The utility-payment token for Subscription-Staking, and  incemtives.
+- **NewAge Nations DAO (NAN):** Our community-driven model for funding the NewAge Nations DAO.
 
 Our AI-powered Dapp and High Volume Trading System (HVTS) generate daily revenues, facilitating NACH buy-backs and enabling daily rewards for NAC holders.
 
