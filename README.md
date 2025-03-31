@@ -23,15 +23,18 @@ Our AI-powered Dapp and High Volume Trading System (HVTS) generate daily revenue
 
 ---
 
-## NACH Airdrops to NAC Holders
+## Rewards to NACH Holders
 
 At the heart of our rewards engine is a system built on the **Solana blockchain**. Key features include:
 
 - **Seamless Integration:**  
   Direct connection to Solana’s mainnet via the latest Solana library ensures rapid and reliable data exchange.
 
-- **Daily Rewards:**  
-  Every day, our engine scans for eligible NAC holders, calculates their proportional rewards, and automatically distributes NACH to their wallets.
+- **SOL Rewards:**  
+  Every 10 minutes, our engine scans for eligible NACH holders, calculates their proportional rewards, and automatically distributes NACH to their wallets.
+
+- **100% APR in 90 Days**  
+  Every 90 Days, holders of NAC, you stake NACH(USD) earn 100% APR. After 10 months, you get your initial NACH(USD) Subscription back. 
 
 ---
 
