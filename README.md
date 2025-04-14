@@ -1,13 +1,13 @@
 # NewAgeNations DAO
 
-Welcome to **NewAgeNations DAO** – a Dev Hub for AI Tokenisation & API Automations for The NewAge Nations. Our ecosystem incentivizes participation through dual-token subscription staking; rewwarding holders of NACH with SOL every 10 minutes, and upto 100% APR incentives every 90 days. Holding upto 100,000 NAC, you are eligible to participate in the NACH 100% APR Subscription-Staking and also participate in NewAge Nations commmunity voting.
+Welcome to **NewAgeNations DAO** – a Dev Hub for AI Tokenisation & API Automations for The NewAge Nations. Our ecosystem incentivizes participation through dual-token subscription staking; rewwarding holders of NAC with NewAgeCash, and upto 100% APR incentives every 90 days. Holding NAC, you are eligible to participate in the NACH 100% APR Subscription-Staking and also participate in NewAge Nations commmunity voting.
 
 Our platform consists of three core tokens:
 - **NewAgeCoin (NAC):** Our DApp's native token for voting & commmunity participation.
 - **NewAgeCash (NACH):** The utility-payment token for Subscription-Staking, and  incemtives.
-- **NewAge Nations DAO (NAN):** Our community-driven model for funding the NewAge Nations DAO.
+- **NewAge Nations DAO (NAN):** Our community-driven vault for the NewAge Nations TRADE-CENTRE.
 
-Our AI-powered Dapp and High Volume Trading System (HVTS) generate daily revenues, facilitating NACH buy-backs and enabling daily liquidity for NAC.
+Our AI-powered NewAge Nations TRADE-CENTRE facilitates NACH buy-backs, enabling daily liquidity for NACH.
 
 ---
 
@@ -29,11 +29,9 @@ At the heart of our rewards engine is a system built on the **Solana blockchain*
 - **Seamless Integration:**  
   Direct connection to Solana’s mainnet via the latest Solana library ensures rapid and reliable data exchange.
 
-- **SOL Rewards:**  
-  Every 10 minutes, our engine scans for eligible NACH holders, calculates their proportional rewards, and automatically distributes SOL to their wallets.
-
 - **100% APR in 90 Days**  
-  Every 90 Days, holders of NAC who stake their NACH(USD) earn 100% APR. After 10 months, you get your initial NACH(USD) Subscription back. 
+  Every 90 Days, holders of NAC who stake their NAC earn 100% APR. After 10 months, you get your initial NAC Subscription back.
+  NACH Payouts to NAC Subscribers 
 
 ---
 
