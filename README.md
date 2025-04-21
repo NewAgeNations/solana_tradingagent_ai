@@ -35,8 +35,8 @@ A high-level overview of planned milestones and deliverables for the NewAge Nati
 
 ### 🔁 Phase 3: Trading Integration & Automation
 6. **Enable Copy Trading Subscriptions**  
-   - Market: Forex  
-   - Brokers: Multi-broker support for global reach  
+   - Market: CRYPTO
+   - Brokers: Multi-CHAIN support for global reach  
    - Automation: Mirror Ask NewAge Nations signals via broker APIs
 
 7. **Deploy Crypto Multi-Chain Trading Signal Dashboard**  
