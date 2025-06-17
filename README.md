@@ -20,7 +20,7 @@ A high-level overview of planned milestones and deliverables for the NewAge Nati
    - Feature: Gated access using on-chain NACH validation
 
 3. **Deploy SOL/NACH Subscription-Staking Dashboard**  
-   - Users can stake $NAHC and earn rewards. 
+   - Users can stake $NACH and earn QUATERLY rewards. 
    - Used to access premium signal tiers and features
 
 ---
@@ -70,7 +70,7 @@ A high-level overview of planned milestones and deliverables for the NewAge Nati
 - **DAO:** [https://www.daos.fun/dao/3p4JfoDZPi88y7dgkrtYWzAL9H15eKivSpA1HHFKzft3](https://www.daos.fun/dao/3p4JfoDZPi88y7dgkrtYWzAL9H15eKivSpA1HHFKzft3)
 - **NACH:** [https://raydium.io/swap/?inputMint=sol&outputMint=oJHmxmEU9A1h7SLNz74XiApuwhqCWghEnGhRTBZX7H6](https://raydium.io/swap/?inputMint=sol&outputMint=oJHmxmEU9A1h7SLNz74XiApuwhqCWghEnGhRTBZX7H6)
 - **Discord:** [https://discord.com/invite/ybSYGvmKT5](https://discord.com/invite/ybSYGvmKT5)
-- **Website:** [http://www.liquidstake.finance/](http://www.;iquidstake.finance/)
+- **Website:** [http://www.newagenations.exchange/](https://www.newagenations.exchangge/)
 
 ---
 
@@ -107,7 +107,7 @@ Stay connected and join our growing community:
 - **Instagram:** [newagenations](https://www.instagram.com/newagenations)
 - **Twitter (X):** [@liquidstakedao](https://twitter.com/liquidstakedao)
 - **Discord:** [Join here](https://discord.com/invite/ybSYGvmKT5)
-- **Website:** [http://www.liquidstake.finance/](http://www.;iquidstake.finance/)
+- **Website:** [http://www.newagenations.exchange/](https://www.newagenations.exchangge/)
 
 ---
 
